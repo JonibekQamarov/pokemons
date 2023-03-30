@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div class="img text-center">
+      <img
+        class="m-5"
+        src="./picture/pokemon_logo 1.png"
+        width="400px"
+        alt="pokemon_logo"
+      />
+    </div>
+    <form class="text-center" data-form>
+      <select data-alpha class="el-input">
+        <option data-option>A-Z</option>
+        <option>Z-A</option>
+        <option>Weight up</option>
+        <option>Weight down</option>
+        <option>Height up</option>
+        <option>Height down</option>
+      </select>
+      <select data-select class="el-input">
+        <option>Grass</option>
+        <option>Normal</option>
+        <option>Fire</option>
+        <option>Water</option>
+        <option>Bug</option>
+        <option>Ground</option>
+        <option>Poison</option>
+      </select>
+      <label for="img"></label>
+      <input
+        class="el-input"
+        id="img"
+        data-img
+        type="text"
+        placeholder="Img url"
+      />
+      <label for="name"></label>
+      <input
+        class="el-input"
+        id="name"
+        data-name
+        type="text"
+        placeholder="Name"
+      />
+      <label for="type"></label>
+      <input
+        class="el-input"
+        id="type"
+        data-type
+        type="text"
+        placeholder="Type"
+      />
+      <label for="weight"></label>
+      <input
+        class="el-input"
+        id="weight"
+        data-weight
+        type="text"
+        placeholder="Weight"
+      />
+      <label for="height"></label>
+      <input
+        class="el-input"
+        id="height"
+        data-height
+        type="text"
+        placeholder="Height"
+      />
+      <button class="el-btn bg-white">Add+</button>
+      <label for="search"></label>
+      <input
+        class="el-input search"
+        id="search"
+        data-search
+        type="search"
+        placeholder="Search"
+      />
+      <label for="type-search"></label>
+      <input
+        class="el-input search"
+        id="type-search"
+        data-type-search
+        type="type-search"
+        placeholder="Type search"
+      />
+      <button
+        data-modal-open="#test-modal"
+        type="button"
+        class="btn btn-light el-btn"
+      >
+        Modal
+      </button>
+    </form>
+
+    <div class="container">
+      <div data-div-wrap class="wrap d-flex">
+        <!-- <div data-div-card class="card m-5" style="width: 12rem"> -->
+        <!--   <img
+            class="card-img-top"
+            src="./picture/pokemon_logo 1.png"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Gross, Pidgeot</p>
+            <p class="d-flex">
+              <span>66kg</span>
+              <span>99g</span>
+            </p>
+            <button type="button" style="width: 10rem" class="btn btn-danger">
+              Delate
+            </button>
+          </div>-->
+        <!-- </div> -->
+      </div>
+    </div>
+    <template data-template-card>
+      <div class="card">
+        <img class="card-img-top" />
+        <div class="card-body">
+          <h5 data-card-title></h5>
+          <p data-card-type></p>
+          <h6>
+            <span class="span" data-card-weight></span>
+            <span data-card-height></span>
+          </h6>
+          <button data-card-add class="btn btn-success w-100 mt-2">Add</button>
+          <button data-card-delate class="btn-danger w-100 mt-2">Delate</button>
+        </div>
+      </div>
+    </template>
+
+    <div class="my-modal" id="test-modal" data-modal>
+      <div class="my-modal__content" data-model-content>
+        <button class="btn btn-close" data-modal-close></button>
+        <div data-favourites-list></div>
+      </div>
+    </div>
+
+    <script src="./js/pokemon.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
